@@ -1,0 +1,51 @@
+// Add fonts
+@import "fonts";
+
+// Add Navbar Styles
+@import "navbar";
+
+// Add Footer Styles
+@import "footer";
+
+// Add components
+@import "components";
+
+// App Styles
+body,
+html {
+    @apply m-0 p-0 font-primary;
+}
+
+body {
+    @apply text-base;
+    .container {
+        max-width: 1202px !important;
+        @apply px-4 mx-auto;
+    }
+    
+}
+
+/* Address */
+address {
+    @apply not-italic;
+    span {
+        @apply block;
+    }
+}
+
+hr {
+    border-color: rgba(1, 56, 61, 0.3);
+    @apply my-4 lg:my-5;
+}
+
+/* Hide horizontal scrollbar */
+.scroll-container {
+    @apply overflow-x-scroll w-full;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+        @apply hidden;
+    }
+}
+
