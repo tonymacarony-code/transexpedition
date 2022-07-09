@@ -427,159 +427,149 @@ Ensure the default browser behavior of the `hidden` attribute.
 .container {
   width: 100%;
 }
-.mb-12 {
-  margin-bottom: 3rem;
+.relative {
+  position: relative;
 }
-.mb-7 {
-  margin-bottom: 1.75rem;
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
 }
-.mb-14 {
-  margin-bottom: 3.5rem;
+.top-0 {
+  top: 0px;
 }
-.mb-6 {
-  margin-bottom: 1.5rem;
+.top-\[90px\] {
+  top: 90px;
 }
-.block {
-  display: block;
+.top-\[-90px\] {
+  top: -90px;
+}
+.z-\[-1\] {
+  z-index: -1;
+}
+.z-0 {
+  z-index: 0;
+}
+.mt-\[9\.25rem\] {
+  margin-top: 9.25rem;
+}
+.mt-\[14\.875rem\] {
+  margin-top: 14.875rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.mt-10 {
+  margin-top: 2.5rem;
 }
 .flex {
   display: flex;
 }
-.grid {
-  display: grid;
-}
-.h-12 {
-  height: 3rem;
-}
 .h-full {
   height: 100%;
 }
-.w-auto {
-  width: auto;
+.h-\[19px\] {
+  height: 19px;
 }
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.h-5 {
+  height: 1.25rem;
 }
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+.w-full {
+  width: 100%;
+}
+.w-7 {
+  width: 1.75rem;
+}
+.max-w-\[49\.563rem\] {
+  max-width: 49.563rem;
+}
+.max-w-\[28\.313rem\] {
+  max-width: 28.313rem;
+}
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .items-center {
   align-items: center;
 }
+.justify-start {
+  justify-content: flex-start;
+}
 .justify-center {
   justify-content: center;
 }
-.gap-y-8 {
-  row-gap: 2rem;
+.justify-between {
+  justify-content: space-between;
 }
-.gap-x-8 {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+.gap-x-\[3\.938rem\] {
+  -moz-column-gap: 3.938rem;
+       column-gap: 3.938rem;
 }
-.gap-y-4 {
-  row-gap: 1rem;
+.gap-x-10 {
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
 }
-.bg-green-800 {
+.gap-x-\[2\.875rem\] {
+  -moz-column-gap: 2.875rem;
+       column-gap: 2.875rem;
+}
+.gap-x-\[9px\] {
+  -moz-column-gap: 9px;
+       column-gap: 9px;
+}
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(22 101 52 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 20 20 / var(--tw-bg-opacity));
 }
-.pb-14 {
-  padding-bottom: 3.5rem;
+.bg-transparent {
+  background-color: transparent;
 }
-.pl-8 {
-  padding-left: 2rem;
+.bg-opacity-60 {
+  --tw-bg-opacity: 0.6;
 }
-.font-primary {
-  font-family: Montserrat;
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.text-sm {
-  font-size: 14px;
-  line-height: 20px;
+.px-\[0\.938rem\] {
+  padding-left: 0.938rem;
+  padding-right: 0.938rem;
 }
-.font-bold {
-  font-weight: 700;
+.py-\[\] {
+  padding-top: ;
+  padding-bottom: ;
 }
-.tracking-normal {
-  letter-spacing: 0em;
+.py-\[0\.438rem\] {
+  padding-top: 0.438rem;
+  padding-bottom: 0.438rem;
+}
+.py-\[1\.563rem\] {
+  padding-top: 1.563rem;
+  padding-bottom: 1.563rem;
+}
+.text-lg {
+  font-size: 18px;
+  line-height: 26px;
+}
+.font-semibold {
+  font-weight: 600;
 }
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-@media (max-width: 1279px) {
-
-  .xl\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-@media (max-width: 1023px) {
-
-  .lg\:mb-0 {
-    margin-bottom: 0px;
-  }
-
-  .lg\:mb-14 {
-    margin-bottom: 3.5rem;
-  }
-
-  .lg\:flex {
-    display: flex;
-  }
-
-  .lg\:w-4\/12 {
-    width: 33.333333%;
-  }
-
-  .lg\:w-8\/12 {
-    width: 66.666667%;
-  }
-
-  .lg\:justify-start {
-    justify-content: flex-start;
-  }
-
-  .lg\:pt-20 {
-    padding-top: 5rem;
-  }
-
-  .lg\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
-  .lg\:pr-10 {
-    padding-right: 2.5rem;
-  }
-}
-@media (max-width: 767px) {
-
-  .md\:container {
-    width: 100%;
-  }
-
-  .md\:mb-14 {
-    margin-bottom: 3.5rem;
-  }
-
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .md\:gap-x-16 {
-    -moz-column-gap: 4rem;
-         column-gap: 4rem;
-  }
-
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .md\:pl-0 {
-    padding-left: 0px;
-  }
+.opacity-60 {
+  opacity: 0.6;
 }

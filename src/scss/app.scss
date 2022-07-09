@@ -17,12 +17,23 @@ html {
 }
 
 body {
-    @apply text-base;
+    @apply text-base overflow-x-hidden;
     .container {
         max-width: 1202px !important;
         @apply px-4 mx-auto;
     }
     
+}
+
+select {
+    @apply cursor-pointer bg-transparent outline-none appearance-none font-semibold text-white hover:text-yellow-200;
+    option {
+        @apply bg-transparent bg-gray-700;
+    }
+}
+
+.header {
+    @apply absolute top-0 h-[53.5rem] w-screen z-[-1] bg-[url(../images/bg-header.jpg )] bg-cover bg-no-repeat bg-center;
 }
 
 /* Address */

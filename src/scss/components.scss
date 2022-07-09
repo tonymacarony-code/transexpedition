@@ -1,5 +1,13 @@
 .btn {
-    @apply px-[1.875rem] py-4 flex justify-center bg-yellow-100 hover:bg-yellow-200 focus:bg-yellow-300 disabled:bg-yellow-400;
+    @apply px-[1.875rem] py-4 flex justify-center rounded-lg text-darkgrey-700 text-base font-medium bg-yellow-100 hover:bg-yellow-200 focus:bg-yellow-300 disabled:bg-yellow-400 transition-all;
+}
+
+.btn-number {
+    @apply px-[0.938rem] py-[0.438rem] flex justify-center text-lg text-gray-600 font-semibold rounded-lg transition-all bg-white hover:bg-yellow-200 focus:bg-yellow-300 disabled:bg-yellow-400;
+}
+
+.link {
+    @apply text-white hover:text-yellow-100 focus:text-yellow-200 transition-all;
 }
 
 .flag {
@@ -15,4 +23,32 @@
 
 .icon-footer {
     @apply w-8 h-8;
+}
+
+h1,
+.h1 {
+    @apply text-h1 lg:text-lg-h1 font-semibold;
+}
+
+h2,
+.h2 {
+    @apply text-h2 lg:text-lg-h2;
+
+    br {
+        @apply md:hidden;
+    }
+}
+
+h3,
+.h3 {
+    @apply text-h3 lg:text-lg-h3;
+
+    br {
+        @apply md:hidden;
+    }
+}
+
+h4,
+.h4 {
+    @apply text-h4 lg:text-lg-h4;
 }
