@@ -1,0 +1,87 @@
+/* Dropdown menu css */
+.dropdown-container {
+    @apply relative max-w-[15rem];
+  
+  
+    .dropdown-toggle {
+        @apply px-3 py-2 text-white bg-transparent rounded-lg cursor-pointer font-semibold relative shadow-[0_0_4px_-2px_rgba(0,0,0,0.5)];
+        transition: all ease-in-out 0.3s;
+  
+      label {
+        @apply cursor-pointer w-full;
+      }
+  
+      &:hover,
+      &:active,
+      &:focus {
+        @apply bg-yellow-100 text-gray-700;
+      }
+    }
+  
+    .dropdown-menu {
+    @apply w-full rounded-lg mt-[17px] absolute left-0 top-full hidden bg-white z-10 shadow-[0_0_4px_-2px_rgba(0,0,0,0.5)];
+      ul {
+        @apply list-none p-0 m-0 overflow-hidden rounded-lg z-10;
+      }
+  
+      a {
+        @apply no-underline block text-gray-700 px-3 py-2 font-semibold shadow-[0_0_4px_-2px_rgba(0,0,0,0.5)];
+        transition: all ease-in-out 0.3s;
+  
+        &:hover,
+        &:active,
+        &:focus {
+            @apply bg-yellow-100 text-gray-700;
+        }
+      }
+    }
+  }
+  
+  .dropdown-menu,
+  .dropdown-toggle {
+    position: relative;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      border: 5px solid;
+      border-top-color: rgba(0, 0, 0, 0);
+      border-left-color: rgba(0, 0, 0, 0);
+      margin-top: -2.5px;
+      background-color: rgba(0, 0, 0, 0);
+      transition: all ease-in-out 0.2s;
+    }
+  }
+  
+  .dropdown-menu {
+    z-index: 10;
+    position: relative;
+  
+    &::before {
+      z-index: -1;
+      transform: rotate(-135deg);
+      top: -4px;
+      border-color: #ffffff;
+      box-shadow: 1px 1px 4px -2px rgba(0, 0, 0, 0.4);
+    }
+  }
+  
+  .dropdown-open {
+    .dropdown-menu.dropdown-active {
+      display: block;
+    }
+  }
+  
+  .dropdown-container.dropdown-open {
+    .dropdown-toggle {
+        background-color: #FFE03C;
+        color: #000000;
+  
+      &:before {
+        transform: rotate(-135deg);
+      }
+    }
+  }

@@ -464,6 +464,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-\[43px\] {
   margin-top: 43px;
 }
+.mr-10 {
+  margin-right: 2.5rem;
+}
+.mr-5 {
+  margin-right: 1.25rem;
+}
 .flex {
   display: flex;
 }
@@ -694,6 +700,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pt-6 {
   padding-top: 1.5rem;
+}
+.pt-\[8\.75rem\] {
+  padding-top: 8.75rem;
 }
 .text-xs {
   font-size: 12px;

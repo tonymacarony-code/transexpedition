@@ -205,6 +205,127 @@ h4, .h4 {
   }
 }
 
+/* Dropdown menu css */
+.dropdown-container {
+  position: relative;
+  max-width: 15rem;
+}
+.dropdown-container .dropdown-toggle {
+  position: relative;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 0 4px -2px rgba(0,0,0,0.5);
+  --tw-shadow-colored: 0 0 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition: all ease-in-out 0.3s;
+}
+.dropdown-container .dropdown-toggle label {
+  width: 100%;
+  cursor: pointer;
+}
+.dropdown-container .dropdown-toggle:hover, .dropdown-container .dropdown-toggle:active, .dropdown-container .dropdown-toggle:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 224 60 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(50 51 56 / var(--tw-text-opacity));
+}
+.dropdown-container .dropdown-menu {
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: 10;
+  margin-top: 17px;
+  display: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-shadow: 0 0 4px -2px rgba(0,0,0,0.5);
+  --tw-shadow-colored: 0 0 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.dropdown-container .dropdown-menu ul {
+  z-index: 10;
+  margin: 0px;
+  list-style-type: none;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  padding: 0px;
+}
+.dropdown-container .dropdown-menu a {
+  display: block;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(50 51 56 / var(--tw-text-opacity));
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  --tw-shadow: 0 0 4px -2px rgba(0,0,0,0.5);
+  --tw-shadow-colored: 0 0 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition: all ease-in-out 0.3s;
+}
+.dropdown-container .dropdown-menu a:hover, .dropdown-container .dropdown-menu a:active, .dropdown-container .dropdown-menu a:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 224 60 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(50 51 56 / var(--tw-text-opacity));
+}
+
+.dropdown-menu,
+.dropdown-toggle {
+  position: relative;
+}
+.dropdown-menu::before,
+.dropdown-toggle::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  border: 5px solid;
+  border-top-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0);
+  margin-top: -2.5px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all ease-in-out 0.2s;
+}
+
+.dropdown-menu {
+  z-index: 10;
+  position: relative;
+}
+.dropdown-menu::before {
+  z-index: -1;
+  transform: rotate(-135deg);
+  top: -4px;
+  border-color: #ffffff;
+  box-shadow: 1px 1px 4px -2px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown-open .dropdown-menu.dropdown-active {
+  display: block;
+}
+
+.dropdown-container.dropdown-open .dropdown-toggle {
+  background-color: #FFE03C;
+  color: #000000;
+}
+.dropdown-container.dropdown-open .dropdown-toggle:before {
+  transform: rotate(-135deg);
+}
+
 body, html {
   margin: 0px;
   padding: 0px;
