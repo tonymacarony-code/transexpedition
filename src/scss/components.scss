@@ -11,7 +11,7 @@
 }
 
 .flag {
-    @apply w-[1.875rem] h-[1.875rem];
+    @apply w-[1.875rem] h-[1.875rem] lg:w-6 lg:h-6;
     img {
         @apply w-full h-full;
     }

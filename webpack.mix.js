@@ -25,7 +25,9 @@ mix.html({
 mix.js(
     [
         'src/js/app.js',
-        'src/js/fix-mix-html-builder.js'
+        'src/js/fix-mix-html-builder.js',
+        'src/js/phonenumber.js',
+        'src/js/textarea.js'
     ],
     'js/app.js'
 );

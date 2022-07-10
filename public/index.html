@@ -5,66 +5,371 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Transexpedition</title>
+    <link rel="icon" type="image/x-icon" href="/public/images/favicon.svg">
 <script defer="defer" src=".//js/manifest.js"></script><script defer="defer" src=".//js/vendor.js"></script><script defer="defer" src=".//js/app.js"></script><link href="./css/tailwind.css" rel="stylesheet"><link href="./css/app.css" rel="stylesheet"></head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="sticky top-0 py-[1.563rem] bg-gray-900 bg-opacity-60">
-    <div class="container">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center gap-x-[3.938rem]">
-                <a href="">
-                    <img src="/public/images/logo.svg" alt=""></a>
-                <ul class="flex gap-x-10">
-                    <li><a class="link" href="">Про нас</a></li>
-                    <li><a class="link" href="">Види</a></li>
-                    <li><a class="link" href="">Етапи</a></li>
-                    <li><a class="link" href="">Контакти</a></li>
-                </ul>
-            </div>
-            <div class="flex items-center gap-x-[2.875rem]">
-                <div class="flex items-center gap-x-2">
-                    <div class="w-7 h-5">
-                        <img class="w-full h-full object-cover" src="/public/images/flags/ukr.png" alt="">
-                    </div>
-                    <select name="language">
-                        <option selected="" value="ukr">
-                            Українська
-                        </option>
-                        <option value="rus">
-                            Russian
-                        </option>
-                    </select>
-                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 6.50001C4.68342 6.89053 5.31658 6.89053 5.70711 6.50001L9.7071 2.50002C10.0976 2.1095 10.0976 1.47633 9.7071 1.08581C9.3166 0.695275 8.6834 0.695275 8.2929 1.08581L5 4.3787L1.70711 1.08581C1.31658 0.695275 0.68342 0.695275 0.29289 1.08581C-0.09763 1.47633 -0.09763 2.1095 0.29289 2.50002L4.29289 6.50001Z" fill="white"></path>
-                    </svg>
-
+    <section class="sticky top-0">
+    <nav class="py-[1.563rem] bg-gray-900 bg-opacity-60 z-10 transition-all">
+        <div class="container">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-x-[3.938rem] xl:gap-x-5">
+                    <a href="">
+                        <img src="/public/images/logo.svg" alt=""></a>
+                    <ul class="flex gap-x-10 xl:gap-x-8 lg:hidden">
+                        <li><a class="link" href="">Про нас</a></li>
+                        <li><a class="link" href="">Види</a></li>
+                        <li><a class="link" href="">Етапи</a></li>
+                        <li><a class="link" href="">Контакти</a></li>
+                    </ul>
                 </div>
-                <a class="btn-number" href="tel:+380553421990">+38(055) 34 21 990</a>
-            </div>
-        </div>
+                <div class="flex items-center gap-x-[2.875rem] lg:hidden">
+                    <div class="flex items-center gap-x-2">
+                        <div class="w-7 h-5">
+                            <img class="w-full h-full object-cover" src="/public/images/flags/ukr.png" alt="">
+                        </div>
+                        <select name="language">
+                            <option selected="" value="ukr">
+                                Українська
+                            </option>
+                            <option value="rus">
+                                Russian
+                            </option>
+                        </select>
+                        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 6.50001C4.68342 6.89053 5.31658 6.89053 5.70711 6.50001L9.7071 2.50002C10.0976 2.1095 10.0976 1.47633 9.7071 1.08581C9.3166 0.695275 8.6834 0.695275 8.2929 1.08581L5 4.3787L1.70711 1.08581C1.31658 0.695275 0.68342 0.695275 0.29289 1.08581C-0.09763 1.47633 -0.09763 2.1095 0.29289 2.50002L4.29289 6.50001Z" fill="white"></path>
+                        </svg>
 
-    </div>
-</nav>
+                    </div>
+                    <a class="btn-number" href="tel:+380553421990">+38(055) 34 21 990</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</section>
 
     <main>
 
-        <header class="header">
-    <div class="mt-[14.875rem] container z-1">
+        <header class="pt-[9.25rem] pb-[18.375rem] lg:pb-[10.375rem]">
+    <div class="bg-image"></div>
+    <div class="container">
         <h1 class="text-white max-w-[49.563rem]">Транспортне перевезення вантажів</h1>
         <p class="mt-4 text-white font-semibold text-lg max-w-[28.313rem]">Здійснюємо транспортування вашого вантажу по
             Україні та за кордон</p>
         <div class="mt-10 flex justify-start">
-            <a class="btn" href="">Зв’язатись</a>
+            <a class="btn sm:w-full" href="">Зв’язатись</a>
         </div>
     </div>
 </header>
 
+        <section class="py-[8.75rem] lg:py-20">
+    <div class="container">
+        <div class="flex flex-wrap justify-center gap-x-8 lg:justify-start lg:gap-y-10">
+            <div class="flex gap-x-6">
+                <div>
+                    <img src="/public/images/benefits/truck.svg" alt="">
+                </div>
+                <div>
+                    <div class="pb-4 max-w-[10.5rem] font-semibold text-gray-600 relative after:absolute after:w-12 after:bg-yellow-100 after:h-0.5 after:bottom-0 after:left-0">
+                        Наявність власного транспорту
+                    </div>
+                    <p class="pt-4 text-gray-300 font-medium max-w-[13.625rem]">Маємо власний автопарк для перевезень
+                    </p>
+
+                </div>
+            </div>
+            <div class="flex gap-x-6">
+                <div>
+                    <img src="/public/images/benefits/check.svg" alt="">
+                </div>
+                <div>
+                    <div class="pb-4 max-w-[10.5rem] font-semibold text-gray-600 relative after:absolute after:w-12 after:bg-yellow-100 after:h-0.5 after:bottom-0 after:left-0">
+                        Підбір найкращого
+                        рішення
+                    </div>
+                    <p class="pt-4 text-gray-300 font-medium max-w-[13.625rem]">В залежності від типу
+                        та розміру вантажу
+                    </p>
+
+                </div>
+            </div>
+            <div class="flex gap-x-6">
+                <div>
+                    <img src="/public/images/benefits/sertificate.svg" alt="">
+                </div>
+                <div>
+                    <div class="pb-4 max-w-[10.5rem] font-semibold text-gray-600 relative after:absolute after:w-12 after:bg-yellow-100 after:h-0.5 after:bottom-0 after:left-0">
+                        Сертифікований
+                        транспорт
+                    </div>
+                    <p class="pt-4 text-gray-300 font-medium max-w-[13.625rem]">Висока якість та
+                        надійність в усьому
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="pb-[8.75rem] lg:pb-20">
+    <div class="container">
+        <div class="flex gap-x-10 lg:flex-col">
+            <div class="max-w-[35rem] lg:order-1 lg:mt-8">
+                <h2 class="font-semibold text-darkgrey-700">Вантажоперевезення від TRANSEXPEDITION</h2>
+                <p class="mt-8 max-w-[34.5rem]">Компанія TRANSEXPEDITION заснована у 1997 році у м. Одеса.
+                    <br>
+                    За цей час ми освоїли маршрути Україною та велікої кількості країн.
+                    <br>
+                    Наша професіональна команда гарантує якість сервісу, тому
+                    якщо вам потрібен надійний партнер, готовий впоратися з найскладнішими вантажами – ми готові
+                    оперативно та грамотно вирішити будь-яке завдання.
+                    <br>
+                    Зателефонуйте нам або залиште заявку для зворотнього зв`язку.
+                </p>
+                <div class="mt-6 flex justify-start">
+                    <a href="" class="btn sm:w-full">Зв’язатись</a>
+                </div>
+                <div class="mt-8 flex justify-between lg:flex-col lg:gap-y-6">
+                    <div>
+                        <h2 class="font-semibold text-gray-500 tracking-[-0.003em] lg:!text-h2">25</h2>
+                        <p class="pt-1">років досвіду</p>
+                    </div>
+                    <div>
+                        <h2 class="font-semibold text-gray-500 tracking-[-0.003em] lg:!text-h2">20000+</h2>
+                        <p class="pt-1">здійснених перевезень</p>
+                    </div>
+                    <div>
+                        <h2 class="font-semibold text-gray-500 tracking-[-0.003em] lg:!text-h2">1000</h2>
+                        <p class="pt-1">перевезень за рік</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-2 rounded-lg">
+                <img class="w-full h-full" src="/public/images/aboutus/aboutusimg.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="pb-[8.75rem] lg:pb-20">
+    <div class="container">
+        <h2 class="text-darkgrey-700 font-semibold tracking-[-0.003em]">Види вантажоперевезень</h2>
+        <div class="pt-8 flex justify-center gap-x-[1.875rem] lg:flex-col lg:gap-y-8 lg:items-center">
+            <div class="p-6 bg-gray-100 rounded-lg">
+                <img class="rounded-lg" src="/public/images/metods/metod-1.jpg" alt="">
+                <h4 class="pt-6 text-gray-600 font-medium">Тентові</h4>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg">
+                <img class="rounded-lg" src="/public/images/metods/metod-2.jpg" alt="">
+                <h4 class="pt-6 text-gray-600 font-medium">Контейнерні</h4>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg">
+                <img class="rounded-lg" src="/public/images/metods/metod-3.jpg" alt="">
+                <h4 class="pt-6 text-gray-600 font-medium">Негабаритні</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="pb-[8.75rem] lg:pb-20">
+    <div class="container">
+        <h2 class="text-darkgrey-700 font-semibold tracking-[-0.003em]">Як це працює?</h2>
+        <div class="mt-8 flex items-center gap-x-[5.5rem] lg:flex-col lg:items-start lg:gap-y-8">
+            <div class="flex flex-col max-w-[12.5rem] lg:max-w-none">
+                <span class="pb-4 text-[100px] leading-[100px] text-darkgrey-700 font-bold">1</span>
+                <div class="pb-4 text-gray-600 font-semibold relative after:absolute after:w-12 after:bg-yellow-100 after:h-0.5 after:bottom-0 after:left-0 z-[-1] lg:text-lg-h4">
+                    Оброблення вхідного
+                    запросу
+                </div>
+                <p class="pt-4 lg:text-lg-sm">Ви залишаєте свої дані при заповненні заявки, після чого з вами
+                    зв’язується менеджер</p>
+            </div>
+            <img class="lg:hidden" src="/public/images/howitworks/separator.svg" alt="">
+            <div class="flex flex-col max-w-[13.5rem] lg:max-w-none">
+                <span class="pb-4 text-[100px] leading-[100px] text-darkgrey-700 font-bold">2</span>
+                <div class="pb-4 text-gray-600 font-semibold relative after:absolute after:w-12 after:bg-yellow-100 after:h-0.5 after:bottom-0 after:left-0 z-[-1] lg:text-lg-h4">
+                    Розрахунок вартості
+                    та узгодження тарифу
+                </div>
+                <p class="pt-4 lg:text-lg-sm">Залежно від виду та
+                    габаритів вантажу з вами
+                    буде узгоджена вартість
+                    транспортування</p>
+            </div>
+            <img class="lg:hidden" src="/public/images/howitworks/separator.svg" alt="">
+            <div class="flex flex-col max-w-[15.063rem] lg:max-w-none">
+                <span class="pb-4 text-[100px] leading-[100px] text-darkgrey-700 font-bold">3</span>
+                <div class="pb-10 text-gray-600 font-semibold relative after:absolute after:w-12 after:bg-yellow-100 after:h-0.5 after:bottom-0 after:left-0 z-[-1] lg:text-lg-h4">
+                    Транспортування
+                </div>
+                <p class="pt-4 lg:text-lg-sm">Здійснення перевезення
+                    за оптімальним та
+                    безпечним маршрутом з
+                    мінімізацією часових витрат</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="py-[8.75rem] lg:pt-0 lg:pb-20">
+    <div class="container">
+        <h2 class="font-semibold text-darkgrey-700">Куди ми доставляємо вантажі?</h2>
+        <h3 class="mt-8 font-medium lg:font-semibold lg:text-lg-h4">По Україні та за кордон, а саме у: </h3>
+        <div class="mt-12 flex flex-[1_1_100%] flex-wrap gap-y-6 lg:justify-center">
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/pol.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Польщу</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/rom.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Румунію</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/bul.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Болгарію</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/mold.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Молдову</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/tur.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Туреччину</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/slov.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Словаччину</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/cro.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Хорватію</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/hung.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Угорщину</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/ger.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Німеччину</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/au.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Австрію</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/cze.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Чехію</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/fra.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Францію</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/esp.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Іспанію</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/ita.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Італію</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/bel.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Бельгію</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/por.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Португалію</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/est.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Естонію</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/lith.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Литву</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/la.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Латвію</h4>
+            </div>
+            <div class="flex gap-x-2 flex-[0_1_20%] lg:flex-[0_1_50%]">
+                <img class="flag" src="/public/images/flags/slo.png" alt="">
+                <h4 class="font-medium text-gray-600 lg:text-base">Словенію</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
     </main>
 
     <!-- Footer -->
-    
+    <footer class="pt-14 bg-darkgrey-800">
+    <div class="container">
+        <div class="pb-16 flex justify-center gap-x-9 border-b border-gray-400 lg:flex-col">
+            <div>
+                <h2 class="text-white font-semibold">Контакти</h2>
+                <p class="mt-8 text-gray-200 max-w-[31.25rem]">
+                    Залиште ваші контактні дані і ми зв’яжемось з Вами
+                    та підберемо найкращій варіант транспортування
+                    Вашого вантажу.
+                </p>
+                <div class="mt-10">
+                    <div class="flex items-center gap-x-3">
+                        <img src="/public/images/footer/phone.svg" alt="">
+                        <div class="text-gray-200">+38 (055) 34 21 990</div>
+                    </div>
+                    <div class="mt-4 flex items-center gap-x-3">
+                        <img src="/public/images/footer/mail.svg" alt="">
+                        <div class="text-gray-200">tovtransexpedition@gmail.com</div>
+                    </div>
+                    <div class="mt-4 flex items-start gap-x-3">
+                        <img src="/public/images/footer/mark.svg" alt="">
+                        <div class="max-w-[25rem] text-gray-200">Україна, 65017, Одеська обл., м. Одеса, Люстдорфська
+                            дорога, будинок 5
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 flex items-center gap-x-6">
+                    <a href=""><img src="/public/images/footer/whatsapp.svg" alt=""></a>
+                    <a href=""><img src="/public/images/footer/viber.svg" alt=""></a>
+                    <a href=""><img src="/public/images/footer/telegram.svg" alt=""></a>
+                </div>
+            </div>
+            <form class="p-8 bg-darkgrey-700 rounded-lg w-full max-w-[27.125rem] lg:mt-10 lg:max-w-none">
+                <h4 class="font-medium text-white">Заповніть заявку</h4>
+                <div class="mt-6 flex-col flex gap-y-2">
+                    <div>
+                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Ім’я та прізвище</label>
+                        <input class="pl-4 py-[11px] bg-gray-700 rounded-lg text-white text-xs outline-yellow-100 outline-1 w-full" type="text">
+                    </div>
+                    <div>
+                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Номер телефону</label>
+                        <input class="pl-4 py-[11px] bg-gray-700 rounded-lg text-white text-xs outline-yellow-100 outline-1 w-full" type="tel" id="myform_phone" name="phone" pattern="+[0-9]{10}" required="">
+                    </div>
+                    <div>
+                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Email</label>
+                        <input class="pl-4 py-[11px] bg-gray-700 rounded-lg text-white text-xs outline-yellow-100 outline-1 w-full" type="email">
+                    </div>
+                    <div>
+                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Коментар</label>
+                        <textarea class="pl-4 py-[11px] bg-gray-700 rounded-lg text-white text-xs outline-yellow-100 outline-1 w-full resize-none" name="comment"></textarea>
+                    </div>
+                    <div class="counter"></div>
+
+                </div>
+                <div class="mt-[43px] flex justify-start">
+                    <input class="btn cursor-pointer sm:w-full" type="submit" value="Відправити">
+                </div>
+            </form>
+        </div>
+        <div class="py-6 text-xs text-gray-400">&copy; ТОВ "ТРАНСЕКСПЕДИЦІЯ", 2022. Усі права захищені.</div>
+    </div>
+</footer>
 
 </body>
 
