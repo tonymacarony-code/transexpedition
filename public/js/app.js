@@ -104,8 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             case 9:
               oReq = _context.sent;
+              document.getElementById('popup-submit').classList.add('btn-done');
 
-            case 10:
+            case 11:
             case "end":
               return _context.stop();
           }
@@ -141,8 +142,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             case 9:
               oReq = _context2.sent;
+              document.getElementById('popup-submit').classList.add('btn-done');
 
-            case 10:
+            case 11:
             case "end":
               return _context2.stop();
           }
@@ -178,8 +180,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             case 9:
               oReq = _context3.sent;
+              document.getElementById('popup-submit').classList.add('btn-done');
 
-            case 10:
+            case 11:
             case "end":
               return _context3.stop();
           }

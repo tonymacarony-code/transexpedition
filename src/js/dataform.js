@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`;
 
         var oReq = await fetch(url);
+        document.getElementById('popup-submit').classList.add('btn-done');
     });
     aboutForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`;
 
         var oReq = await fetch(url);
+        document.getElementById('popup-submit').classList.add('btn-done');
     });
     footerForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -59,5 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
         var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`;
 
         var oReq = await fetch(url);
+        document.getElementById('popup-submit').classList.add('btn-done');
     });
 });

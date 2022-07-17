@@ -1,5 +1,8 @@
 .btn {
     @apply px-[1.875rem] py-4 flex justify-center rounded-lg text-darkgrey-700 text-base font-medium bg-yellow-100 hover:bg-yellow-200 focus:bg-yellow-300 disabled:bg-yellow-400 transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+    &-done {
+        @apply bg-green-600 text-white #{!important};
+    }
 }
 
 .btn-number {
