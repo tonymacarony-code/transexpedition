@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let aboutForm = document.getElementById('about-form');
     let footerForm = document.getElementById('footer-form');
 
-    headerForm.addEventListener('submit', (e) => {
+    headerForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         let data = {
             name: document.getElementsByName('popup-name')[0].value,
@@ -14,9 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document
             .getElementById('popup-submit')
             .setAttribute('disabled', 'disabled');
-        console.log(data);
+        var message = `\n | Имя: ${data.name} \n | Телефон: ${data.phone} \n | Email: ${data.email} \n | Комментарий: ${data.comment} \n`;
+
+        var token = '5481519098:AAHfqzfVxtqlN0IJjsVrtKnu2JAzLvDg8es';
+        var chat_id = -1001752986825;
+        var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`;
+
+        var oReq = await fetch(url);
     });
-    aboutForm.addEventListener('submit', (e) => {
+    aboutForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         let data = {
             name: document.getElementsByName('popup2-name')[0].value,
@@ -27,9 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document
             .getElementById('popup2-submit')
             .setAttribute('disabled', 'disabled');
-        console.log(data);
+        var message = `\n | Имя: ${data.name} \n | Телефон: ${data.phone} \n | Email: ${data.email} \n | Комментарий: ${data.comment} \n`;
+
+        var token = '5481519098:AAHfqzfVxtqlN0IJjsVrtKnu2JAzLvDg8es';
+        var chat_id = -1001752986825;
+        var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`;
+
+        var oReq = await fetch(url);
     });
-    footerForm.addEventListener('submit', (e) => {
+    footerForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         let data = {
             name: document.getElementsByName('footer-name')[0].value,
@@ -40,6 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document
             .getElementById('footer-submit')
             .setAttribute('disabled', 'disabled');
-        console.log(data);
+        var message = `\n | Имя: ${data.name} \n | Телефон: ${data.phone} \n | Email: ${data.email} \n | Комментарий: ${data.comment} \n`;
+
+        var token = '5481519098:AAHfqzfVxtqlN0IJjsVrtKnu2JAzLvDg8es';
+        var chat_id = -1001752986825;
+        var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`;
+
+        var oReq = await fetch(url);
     });
 });

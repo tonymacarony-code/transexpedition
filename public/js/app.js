@@ -60,6 +60,141 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
 /***/ }),
 
+/***/ "./src/js/dataform.js":
+/*!****************************!*\
+  !*** ./src/js/dataform.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+document.addEventListener('DOMContentLoaded', function () {
+  var headerForm = document.getElementById('header-form');
+  var aboutForm = document.getElementById('about-form');
+  var footerForm = document.getElementById('footer-form');
+  headerForm.addEventListener('submit', /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(e) {
+      var data, message, token, chat_id, url, oReq;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              e.preventDefault();
+              data = {
+                name: document.getElementsByName('popup-name')[0].value,
+                phone: document.getElementsByName('popup-phone')[0].value,
+                email: document.getElementsByName('popup-email')[0].value,
+                comment: document.getElementsByName('popup-comment')[0].value
+              };
+              document.getElementById('popup-submit').setAttribute('disabled', 'disabled');
+              message = "\n | \u0418\u043C\u044F: ".concat(data.name, " \n | \u0422\u0435\u043B\u0435\u0444\u043E\u043D: ").concat(data.phone, " \n | Email: ").concat(data.email, " \n | \u041A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0439: ").concat(data.comment, " \n");
+              token = '5481519098:AAHfqzfVxtqlN0IJjsVrtKnu2JAzLvDg8es';
+              chat_id = -1001752986825;
+              url = "https://api.telegram.org/bot".concat(token, "/sendMessage?chat_id=").concat(chat_id, "&text=").concat(message);
+              _context.next = 9;
+              return fetch(url);
+
+            case 9:
+              oReq = _context.sent;
+
+            case 10:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function (_x) {
+      return _ref.apply(this, arguments);
+    };
+  }());
+  aboutForm.addEventListener('submit', /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2(e) {
+      var data, message, token, chat_id, url, oReq;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              e.preventDefault();
+              data = {
+                name: document.getElementsByName('popup2-name')[0].value,
+                phone: document.getElementsByName('popup2-phone')[0].value,
+                email: document.getElementsByName('popup2-email')[0].value,
+                comment: document.getElementsByName('popup2-comment')[0].value
+              };
+              document.getElementById('popup2-submit').setAttribute('disabled', 'disabled');
+              message = "\n | \u0418\u043C\u044F: ".concat(data.name, " \n | \u0422\u0435\u043B\u0435\u0444\u043E\u043D: ").concat(data.phone, " \n | Email: ").concat(data.email, " \n | \u041A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0439: ").concat(data.comment, " \n");
+              token = '5481519098:AAHfqzfVxtqlN0IJjsVrtKnu2JAzLvDg8es';
+              chat_id = -1001752986825;
+              url = "https://api.telegram.org/bot".concat(token, "/sendMessage?chat_id=").concat(chat_id, "&text=").concat(message);
+              _context2.next = 9;
+              return fetch(url);
+
+            case 9:
+              oReq = _context2.sent;
+
+            case 10:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function (_x2) {
+      return _ref2.apply(this, arguments);
+    };
+  }());
+  footerForm.addEventListener('submit', /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(e) {
+      var data, message, token, chat_id, url, oReq;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              e.preventDefault();
+              data = {
+                name: document.getElementsByName('footer-name')[0].value,
+                phone: document.getElementsByName('footer-phone')[0].value,
+                email: document.getElementsByName('footer-email')[0].value,
+                comment: document.getElementsByName('footer-comment')[0].value
+              };
+              document.getElementById('footer-submit').setAttribute('disabled', 'disabled');
+              message = "\n | \u0418\u043C\u044F: ".concat(data.name, " \n | \u0422\u0435\u043B\u0435\u0444\u043E\u043D: ").concat(data.phone, " \n | Email: ").concat(data.email, " \n | \u041A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0439: ").concat(data.comment, " \n");
+              token = '5481519098:AAHfqzfVxtqlN0IJjsVrtKnu2JAzLvDg8es';
+              chat_id = -1001752986825;
+              url = "https://api.telegram.org/bot".concat(token, "/sendMessage?chat_id=").concat(chat_id, "&text=").concat(message);
+              _context3.next = 9;
+              return fetch(url);
+
+            case 9:
+              oReq = _context3.sent;
+
+            case 10:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+
+    return function (_x3) {
+      return _ref3.apply(this, arguments);
+    };
+  }());
+});
+
+/***/ }),
+
 /***/ "./src/js/dropdown.js":
 /*!****************************!*\
   !*** ./src/js/dropdown.js ***!
@@ -187,53 +322,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ "./src/js/textarea.js":
-/*!****************************!*\
-  !*** ./src/js/textarea.js ***!
-  \****************************/
-/***/ (() => {
-
-document.addEventListener('DOMContentLoaded', function () {
-  var headerForm = document.getElementById('header-form');
-  var aboutForm = document.getElementById('about-form');
-  var footerForm = document.getElementById('footer-form');
-  headerForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var data = {
-      name: document.getElementsByName('popup-name')[0].value,
-      phone: document.getElementsByName('popup-phone')[0].value,
-      email: document.getElementsByName('popup-email')[0].value,
-      comment: document.getElementsByName('popup-comment')[0].value
-    };
-    document.getElementById('popup-submit').setAttribute('disabled', 'disabled');
-    console.log(data);
-  });
-  aboutForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var data = {
-      name: document.getElementsByName('popup2-name')[0].value,
-      phone: document.getElementsByName('popup2-phone')[0].value,
-      email: document.getElementsByName('popup2-email')[0].value,
-      comment: document.getElementsByName('popup2-comment')[0].value
-    };
-    document.getElementById('popup2-submit').setAttribute('disabled', 'disabled');
-    console.log(data);
-  });
-  footerForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var data = {
-      name: document.getElementsByName('footer-name')[0].value,
-      phone: document.getElementsByName('footer-phone')[0].value,
-      email: document.getElementsByName('footer-email')[0].value,
-      comment: document.getElementsByName('footer-comment')[0].value
-    };
-    document.getElementById('footer-submit').setAttribute('disabled', 'disabled');
-    console.log(data);
-  });
-});
-
-/***/ }),
-
 /***/ "./src/scss/app.scss":
 /*!***************************!*\
   !*** ./src/scss/app.scss ***!
@@ -263,7 +351,7 @@ __webpack_require__.r(__webpack_exports__);
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["css/tailwind","css/app","/js/vendor"], () => (__webpack_exec__("./src/js/app.js"), __webpack_exec__("./src/js/fix-mix-html-builder.js"), __webpack_exec__("./src/js/textarea.js"), __webpack_exec__("./src/js/navbar.js"), __webpack_exec__("./src/js/dropdown.js"), __webpack_exec__("./src/scss/app.scss"), __webpack_exec__("./src/scss/tailwind.scss")));
+/******/ __webpack_require__.O(0, ["css/tailwind","css/app","/js/vendor"], () => (__webpack_exec__("./src/js/app.js"), __webpack_exec__("./src/js/fix-mix-html-builder.js"), __webpack_exec__("./src/js/dataform.js"), __webpack_exec__("./src/js/navbar.js"), __webpack_exec__("./src/js/dropdown.js"), __webpack_exec__("./src/scss/app.scss"), __webpack_exec__("./src/scss/tailwind.scss")));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
