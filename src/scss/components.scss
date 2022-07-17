@@ -9,6 +9,9 @@
 .link {
     @apply text-white hover:text-yellow-100 focus:text-yellow-200 transition-all;
 }
+.link-mobile {
+    @apply text-lg-h3 font-semibold;
+}
 
 .flag {
     @apply w-[1.875rem] h-[1.875rem] lg:w-6 lg:h-6;

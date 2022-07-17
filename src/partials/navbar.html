@@ -1,4 +1,4 @@
-<section class="sticky top-0">
+<section class="sticky top-0" x-data="nav( $el )">
     <nav class="py-[1.563rem] bg-gray-900 z-10 bg-opacity-60 transition ease-in-out">
         <div class="container">
             <div class="flex items-center justify-between">
@@ -33,9 +33,43 @@
                     </div>
                     <a class="btn-number" href="tel:+380553421990">+38(055) 34 21 990</a>
                 </div>
+                <div class="hamburger" @click="hamburgerClick()" :class="{ 'opened' : mobileMenu }">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
 
         </div>
-    </nav>
 
+        </div>
+    </nav>
+    <div class="menu" :class="{ 'opened' : mobileMenu }">
+        <div class="dropdown-container">
+            <div class="dropdown-toggle click-dropdown">
+                <div class="flex items-center gap-x-2 w-48">
+                    <div class="w-7 h-5">
+                        <img class="w-full h-full object-cover" src="/public/images/flags/ukr.png" alt="">
+                    </div>
+                    <span class="link-mobile">Українська</span>
+                </div>
+
+            </div>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a class="link-mobile" href="./index-ru.html">
+                            Язык
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul class="pt-10 flex flex-col gap-y-4">
+            <li><a class="link link-mobile" href="">Про нас</a></li>
+            <li><a class="link link-mobile" href="">Види</a></li>
+            <li><a class="link link-mobile" href="">Етапи</a></li>
+            <li><a class="link link-mobile" href="">Контакти</a></li>
+        </ul>
+        <a class="mt-10 btn-number" href="tel:+380553421990">+38(055) 34 21 990</a>
+    </div>
 </section>

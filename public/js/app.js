@@ -1,5 +1,44 @@
 (self["webpackChunktransexpedition"] = self["webpackChunktransexpedition"] || []).push([["/js/app"],{
 
+/***/ "./src/js/alpine/nav.js":
+/*!******************************!*\
+  !*** ./src/js/alpine/nav.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function ($el) {
+  return {
+    mobileMenu: false,
+    html: document.querySelector('html'),
+    menu: $el.querySelector('.menu'),
+    init: function init() {
+      this.mobileMenuItem();
+    },
+    hamburgerClick: function hamburgerClick() {
+      this.mobileMenu = !this.mobileMenu;
+      this.html.classList.toggle('overflow-hidden');
+    },
+    mobileMenuItem: function mobileMenuItem() {
+      var menu = this.menu,
+          dropMenu = menu.querySelectorAll('.menu-item-has-children');
+      dropMenu.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+          if (e.target == e.currentTarget) {
+            item.classList.toggle('open');
+          }
+        });
+      });
+    }
+  };
+});
+
+/***/ }),
+
 /***/ "./src/js/app.js":
 /*!***********************!*\
   !*** ./src/js/app.js ***!
@@ -9,11 +48,14 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
+/* harmony import */ var _alpine_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./alpine/nav.js */ "./src/js/alpine/nav.js");
 /**
-* Import Alpine js
-*/
+ * Import Alpine js
+ */
+
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('nav', _alpine_nav_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
 /***/ }),

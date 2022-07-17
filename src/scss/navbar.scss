@@ -5,3 +5,48 @@ ul {
         }
     }
 }
+.menu {
+        @apply hidden;
+
+        &.opened{
+            @apply pl-8 pt-24 top-0 w-[95%] h-screen right-0 absolute flex flex-col items-start bg-darkgrey-800;
+        }    
+}
+.hamburger{
+        @apply flex flex-col w-6 h-[18px] cursor-pointer relative z-[1];
+
+        span{
+            @apply w-full h-0.5 bg-white rounded-lg transition-all ease-in absolute top-0;
+
+            &:nth-child( 1 ){
+                @apply top-0;
+            }
+
+            &:nth-child( 2 ){
+                @apply top-[8px] right-0 opacity-100;
+            }
+
+            &:nth-child( 3 ){
+                @apply top-[16px];
+            }
+
+        }
+
+        &.opened{
+            span{
+                @apply top-[8px] bg-white;
+
+                &:nth-child( 1 ){
+                    @apply rotate-45;
+                }
+
+                &:nth-child( 3 ){
+                    @apply -rotate-45;
+                }
+
+                &:nth-child( 2 ){
+                    @apply opacity-0 right-[60px];
+                }
+            }
+        }
+    }

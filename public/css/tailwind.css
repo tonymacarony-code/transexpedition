@@ -482,9 +482,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-4 {
   margin-top: 1rem;
 }
-.mr-10 {
-  margin-right: 2.5rem;
-}
 .flex {
   display: flex;
 }
@@ -497,14 +494,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-full {
   width: 100%;
 }
+.w-\[168px\] {
+  width: 168px;
+}
 .w-7 {
   width: 1.75rem;
 }
-.w-\[195px\] {
-  width: 195px;
-}
-.w-\[168px\] {
-  width: 168px;
+.w-48 {
+  width: 12rem;
 }
 .max-w-\[35rem\] {
   max-width: 35rem;
@@ -635,6 +632,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   -moz-column-gap: 2.875rem;
        column-gap: 2.875rem;
 }
+.gap-y-4 {
+  row-gap: 1rem;
+}
 .overflow-y-auto {
   overflow-y: auto;
 }
@@ -747,8 +747,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pt-6 {
   padding-top: 1.5rem;
 }
-.pr-10 {
-  padding-right: 2.5rem;
+.pt-10 {
+  padding-top: 2.5rem;
 }
 .text-xs {
   font-size: 12px;
@@ -997,6 +997,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:w-full {
     width: 100%;
+  }
+
+  .sm\:w-\[calc\(100\%_-_16px_\*_2\)\] {
+    width: calc(100% - 16px * 2);
   }
 
   .sm\:max-w-none {
