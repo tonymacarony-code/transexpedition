@@ -187,29 +187,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ "./src/js/phonenumber.js":
-/*!*******************************!*\
-  !*** ./src/js/phonenumber.js ***!
-  \*******************************/
-/***/ (() => {
-
-document.addEventListener('DOMContentLoaded', function () {
-  var phone_input = document.getElementById("myform_phone");
-  phone_input.addEventListener('input', function () {
-    phone_input.setCustomValidity('');
-    phone_input.checkValidity();
-  });
-  phone_input.addEventListener('invalid', function () {
-    if (phone_input.value === '') {
-      phone_input.setCustomValidity('Введіть номер телефону!');
-    } else {
-      phone_input.setCustomValidity('Введіть номер телефону у форматі: +380123456789');
-    }
-  });
-});
-
-/***/ }),
-
 /***/ "./src/js/textarea.js":
 /*!****************************!*\
   !*** ./src/js/textarea.js ***!
@@ -217,17 +194,42 @@ document.addEventListener('DOMContentLoaded', function () {
 /***/ (() => {
 
 document.addEventListener('DOMContentLoaded', function () {
-  function countChar(val) {
-    var len = val.value.length;
-
-    if (len >= 500) {
-      val.value = val.value.substring(0, 500);
-    } else {
-      $('#charNum').text(500 - len);
-    }
-  }
-
-  ;
+  var headerForm = document.getElementById('header-form');
+  var aboutForm = document.getElementById('about-form');
+  var footerForm = document.getElementById('footer-form');
+  headerForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = {
+      name: document.getElementsByName('popup-name')[0].value,
+      phone: document.getElementsByName('popup-phone')[0].value,
+      email: document.getElementsByName('popup-email')[0].value,
+      comment: document.getElementsByName('popup-comment')[0].value
+    };
+    document.getElementById('popup-submit').setAttribute('disabled', 'disabled');
+    console.log(data);
+  });
+  aboutForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = {
+      name: document.getElementsByName('popup2-name')[0].value,
+      phone: document.getElementsByName('popup2-phone')[0].value,
+      email: document.getElementsByName('popup2-email')[0].value,
+      comment: document.getElementsByName('popup2-comment')[0].value
+    };
+    document.getElementById('popup2-submit').setAttribute('disabled', 'disabled');
+    console.log(data);
+  });
+  footerForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = {
+      name: document.getElementsByName('footer-name')[0].value,
+      phone: document.getElementsByName('footer-phone')[0].value,
+      email: document.getElementsByName('footer-email')[0].value,
+      comment: document.getElementsByName('footer-comment')[0].value
+    };
+    document.getElementById('footer-submit').setAttribute('disabled', 'disabled');
+    console.log(data);
+  });
 });
 
 /***/ }),
@@ -261,7 +263,7 @@ __webpack_require__.r(__webpack_exports__);
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["css/tailwind","css/app","/js/vendor"], () => (__webpack_exec__("./src/js/app.js"), __webpack_exec__("./src/js/fix-mix-html-builder.js"), __webpack_exec__("./src/js/phonenumber.js"), __webpack_exec__("./src/js/textarea.js"), __webpack_exec__("./src/js/navbar.js"), __webpack_exec__("./src/js/dropdown.js"), __webpack_exec__("./src/scss/app.scss"), __webpack_exec__("./src/scss/tailwind.scss")));
+/******/ __webpack_require__.O(0, ["css/tailwind","css/app","/js/vendor"], () => (__webpack_exec__("./src/js/app.js"), __webpack_exec__("./src/js/fix-mix-html-builder.js"), __webpack_exec__("./src/js/textarea.js"), __webpack_exec__("./src/js/navbar.js"), __webpack_exec__("./src/js/dropdown.js"), __webpack_exec__("./src/scss/app.scss"), __webpack_exec__("./src/scss/tailwind.scss")));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);

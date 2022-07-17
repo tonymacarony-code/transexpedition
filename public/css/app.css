@@ -51,11 +51,17 @@ ul li a {
 .hamburger {
   position: relative;
   z-index: 1;
-  display: flex;
+  display: none;
   height: 18px;
   width: 1.5rem;
   cursor: pointer;
   flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+  }
 }
 .hamburger span {
   position: absolute;
@@ -130,8 +136,10 @@ ul li a {
 }
 
 .btn:disabled {
+  cursor: not-allowed;
   --tw-bg-opacity: 1;
   background-color: rgb(215 201 131 / var(--tw-bg-opacity));
+  opacity: 0.5;
 }
 
 .btn-number {
@@ -448,18 +456,11 @@ select option {
   top: 0px;
   z-index: -1;
   height: 100%;
-  max-height: 856px;
   width: 100vw;
   background-image: url(../images/bg-header.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-@media (max-width: 1024px) {
-  .bg-image {
-    max-height: 708px;
-  }
 }
 
 /* Address */

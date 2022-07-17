@@ -1,4 +1,4 @@
-<header class="pt-[9.25rem] pb-[18.375rem] lg:pb-[10.375rem]">
+<header class="pt-[14.875rem] pb-[18.375rem] overflow-hidden max-h-[856px] h-full relative lg:pb-[10.375rem]">
     <div class="bg-image"></div>
     <div class="container">
         <h1 class="text-white max-w-[49.563rem]">Транспортне перевезення вантажів</h1>
@@ -13,7 +13,7 @@
             x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0"
             x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-500"
             x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-cloak>
-            <form
+            <form id="header-form"
                 class="p-8 bg-white rounded-lg w-full max-w-[27.125rem] transition-all transform sm:w-[calc(100%_-_16px_*_2)] relative"
                 aria-modal="true" aria-labelledby="modal-headline" x-show="modal"
                 x-transition:enter="transition ease-out duration-300"
@@ -31,34 +31,32 @@
                 <h4 class="font-medium text-darkgrey-700">Заповніть заявку</h4>
                 <div class="mt-6 flex-col flex gap-y-2">
                     <div>
-                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Ім’я та прізвище</label>
+                        <label class="pb-1 text-xs font-medium text-gray-400">Ім’я та прізвище</label>
                         <input
                             class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full"
-                            type="text">
+                            name="popup-name" type="text">
                     </div>
                     <div>
-                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Номер телефону</label>
+                        <label class="pb-1 text-xs font-medium text-gray-400">Номер телефону</label>
                         <input
                             class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full"
-                            type="tel" id="myform_phone" name="phone" pattern="+[0-9]{10}" required>
+                            type="tel" name="popup-phone" pattern="+[0-9]{10}" required>
                     </div>
                     <div>
-                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Email</label>
+                        <label class="pb-1 text-xs font-medium text-gray-400">Email</label>
                         <input
                             class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full"
-                            type="email">
+                            name="popup-email" type="email">
                     </div>
                     <div>
-                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Коментар</label>
+                        <label class="pb-1 text-xs font-medium text-gray-400">Коментар</label>
                         <textarea
                             class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full resize-none"
-                            name="comment"></textarea>
+                            name="popup-comment"></textarea>
                     </div>
-                    <div class="counter"></div>
-
                 </div>
                 <div class="mt-[43px] flex justify-start">
-                    <input class="btn cursor-pointer sm:w-full" type="submit" value="Відправити">
+                    <input class="btn cursor-pointer sm:w-full" type="submit" id="popup-submit" value="Відправити">
                 </div>
             </form>
 

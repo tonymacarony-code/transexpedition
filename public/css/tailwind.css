@@ -491,6 +491,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-5 {
   height: 1.25rem;
 }
+.max-h-\[856px\] {
+  max-height: 856px;
+}
 .w-full {
   width: 100%;
 }
@@ -635,6 +638,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-y-4 {
   row-gap: 1rem;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 .overflow-y-auto {
   overflow-y: auto;
 }
@@ -737,6 +743,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pb-\[18\.375rem\] {
   padding-bottom: 18.375rem;
+}
+.pt-\[14\.875rem\] {
+  padding-top: 14.875rem;
 }
 .pb-10 {
   padding-bottom: 2.5rem;

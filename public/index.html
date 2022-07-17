@@ -16,7 +16,7 @@
 <body>
 
     <!-- Navbar -->
-    <section class="sticky top-0" x-data="nav( $el )">
+    <section class="fixed z-10 w-full top-0" x-data="nav( $el )">
     <nav class="py-[1.563rem] bg-gray-900 z-10 bg-opacity-60 transition ease-in-out">
         <div class="container">
             <div class="flex items-center justify-between">
@@ -24,10 +24,10 @@
                     <a href="">
                         <img src="/public/images/logo.svg" alt=""></a>
                     <ul class="flex gap-x-10 xl:gap-x-8 lg:hidden">
-                        <li><a class="link" href="">Про нас</a></li>
-                        <li><a class="link" href="">Види</a></li>
-                        <li><a class="link" href="">Етапи</a></li>
-                        <li><a class="link" href="">Контакти</a></li>
+                        <li><a class="link" href="#aboutus">Про нас</a></li>
+                        <li><a class="link" href="#metods">Види</a></li>
+                        <li><a class="link" href="#steps">Етапи</a></li>
+                        <li><a class="link" href="#footer">Контакти</a></li>
                     </ul>
                 </div>
                 <div class="flex items-center gap-x-[2.875rem] lg:hidden">
@@ -83,10 +83,10 @@
         </div>
 
         <ul class="pt-10 flex flex-col gap-y-4">
-            <li><a class="link link-mobile" href="">Про нас</a></li>
-            <li><a class="link link-mobile" href="">Види</a></li>
-            <li><a class="link link-mobile" href="">Етапи</a></li>
-            <li><a class="link link-mobile" href="">Контакти</a></li>
+            <li><a class="link link-mobile" href="#aboutus">Про нас</a></li>
+            <li><a class="link link-mobile" href="#metods">Види</a></li>
+            <li><a class="link link-mobile" href="#steps">Етапи</a></li>
+            <li><a class="link link-mobile" href="#footer">Контакти</a></li>
         </ul>
         <a class="mt-10 btn-number" href="tel:+380553421990">+38(055) 34 21 990</a>
     </div>
@@ -94,7 +94,7 @@
 
     <main>
 
-        <header class="pt-[9.25rem] pb-[18.375rem] lg:pb-[10.375rem]">
+        <header class="pt-[14.875rem] pb-[18.375rem] overflow-hidden max-h-[856px] h-full relative lg:pb-[10.375rem]">
     <div class="bg-image"></div>
     <div class="container">
         <h1 class="text-white max-w-[49.563rem]">Транспортне перевезення вантажів</h1>
@@ -104,7 +104,7 @@
             <a x-on:click.prevent="$dispatch('modal-overlay',{id})" class="btn sm:w-full" href="">Зв’язатись</a>
         </div>
         <div class="fixed inset-0 z-10 flex flex-col items-center justify-center overflow-y-auto bg-black bg-opacity-80" x-data="{modal:false}" x-show="modal" x-on:modal-overlay.window="if ($event.detail.id == 'modal-form') modal=true" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-cloak="">
-            <form class="p-8 bg-white rounded-lg w-full max-w-[27.125rem] transition-all transform sm:w-[calc(100%_-_16px_*_2)] relative" aria-modal="true" aria-labelledby="modal-headline" x-show="modal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4 sm:translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4 sm:translate-y-4" @click.away="modal=false">
+            <form id="header-form" class="p-8 bg-white rounded-lg w-full max-w-[27.125rem] transition-all transform sm:w-[calc(100%_-_16px_*_2)] relative" aria-modal="true" aria-labelledby="modal-headline" x-show="modal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4 sm:translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4 sm:translate-y-4" @click.away="modal=false">
                 <div @click="modal=false" class="absolute top-[-2.5rem] right-0 cursor-pointer">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="hover:fill-yellow-100" fill-rule="evenodd" clip-rule="evenodd" d="M19.1341 2.6007C19.6133 2.12166 19.6133 1.34497 19.1341 0.865933C18.6552 0.386893 17.8785 0.386893 17.3995 0.865933L10.0002 8.26523L2.6009 0.865933C2.12184 0.386893 1.34516 0.386893 0.866116 0.865933C0.387076 1.34497 0.387076 2.12166 0.866116 2.6007L8.26541 9.99999L0.866116 17.3993C0.387076 17.8784 0.387076 18.6549 0.866116 19.1341C1.34516 19.613 2.12184 19.613 2.6009 19.1341L10.0002 11.7348L17.3995 19.1341C17.8785 19.613 18.6552 19.613 19.1341 19.1341C19.6133 18.6549 19.6133 17.8784 19.1341 17.3993L11.7349 9.99999L19.1341 2.6007Z" fill="white"></path>
@@ -113,26 +113,24 @@
                 <h4 class="font-medium text-darkgrey-700">Заповніть заявку</h4>
                 <div class="mt-6 flex-col flex gap-y-2">
                     <div>
-                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Ім’я та прізвище</label>
-                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" type="text">
+                        <label class="pb-1 text-xs font-medium text-gray-400">Ім’я та прізвище</label>
+                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" name="popup-name" type="text">
                     </div>
                     <div>
-                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Номер телефону</label>
-                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" type="tel" id="myform_phone" name="phone" pattern="+[0-9]{10}" required="">
+                        <label class="pb-1 text-xs font-medium text-gray-400">Номер телефону</label>
+                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" type="tel" name="popup-phone" pattern="+[0-9]{10}" required="">
                     </div>
                     <div>
-                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Email</label>
-                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" type="email">
+                        <label class="pb-1 text-xs font-medium text-gray-400">Email</label>
+                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" name="popup-email" type="email">
                     </div>
                     <div>
-                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Коментар</label>
-                        <textarea class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full resize-none" name="comment"></textarea>
+                        <label class="pb-1 text-xs font-medium text-gray-400">Коментар</label>
+                        <textarea class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full resize-none" name="popup-comment"></textarea>
                     </div>
-                    <div class="counter"></div>
-
                 </div>
                 <div class="mt-[43px] flex justify-start">
-                    <input class="btn cursor-pointer sm:w-full" type="submit" value="Відправити">
+                    <input class="btn cursor-pointer sm:w-full" type="submit" id="popup-submit" value="Відправити">
                 </div>
             </form>
 
@@ -140,7 +138,7 @@
     </div>
 </header>
 
-        <section class="py-[8.75rem] lg:py-20">
+        <section class="py-[8.75rem] lg:py-20" id="aboutus">
     <div class="container">
         <div class="flex flex-wrap justify-center gap-x-8 lg:justify-start lg:gap-y-10">
             <div class="flex gap-x-6">
@@ -228,7 +226,7 @@
             </div>
         </div>
         <div class="fixed inset-0 z-10 flex flex-col items-center justify-center overflow-y-auto bg-black bg-opacity-80" x-data="{modal:false}" x-show="modal" x-on:modal-overlay.window="if ($event.detail.id == 'modal-example') modal=true" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-cloak="">
-            <form class="p-8 bg-white rounded-lg w-full max-w-[27.125rem] transition-all transform sm:max-w-none sm:mx-4 relative" aria-modal="true" aria-labelledby="modal-headline" x-show="modal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4 sm:translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4 sm:translate-y-4" @click.away="modal=false">
+            <form id="about-form" class="p-8 bg-white rounded-lg w-full max-w-[27.125rem] transition-all transform sm:w-[calc(100%_-_16px_*_2)] relative" aria-modal="true" aria-labelledby="modal-headline" x-show="modal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4 sm:translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4 sm:translate-y-4" @click.away="modal=false">
                 <div @click="modal=false" class="absolute top-[-2.5rem] right-0 cursor-pointer">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="hover:fill-yellow-100" fill-rule="evenodd" clip-rule="evenodd" d="M19.1341 2.6007C19.6133 2.12166 19.6133 1.34497 19.1341 0.865933C18.6552 0.386893 17.8785 0.386893 17.3995 0.865933L10.0002 8.26523L2.6009 0.865933C2.12184 0.386893 1.34516 0.386893 0.866116 0.865933C0.387076 1.34497 0.387076 2.12166 0.866116 2.6007L8.26541 9.99999L0.866116 17.3993C0.387076 17.8784 0.387076 18.6549 0.866116 19.1341C1.34516 19.613 2.12184 19.613 2.6009 19.1341L10.0002 11.7348L17.3995 19.1341C17.8785 19.613 18.6552 19.613 19.1341 19.1341C19.6133 18.6549 19.6133 17.8784 19.1341 17.3993L11.7349 9.99999L19.1341 2.6007Z" fill="white"></path>
@@ -237,26 +235,24 @@
                 <h4 class="font-medium text-darkgrey-700">Заповніть заявку</h4>
                 <div class="mt-6 flex-col flex gap-y-2">
                     <div>
-                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Ім’я та прізвище</label>
-                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" type="text">
+                        <label class="pb-1 text-xs font-medium text-gray-400">Ім’я та прізвище</label>
+                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" name="popup2-name" type="text">
                     </div>
                     <div>
-                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Номер телефону</label>
-                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" type="tel" id="myform_phone" name="phone" pattern="+[0-9]{10}" required="">
+                        <label class="pb-1 text-xs font-medium text-gray-400">Номер телефону</label>
+                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" type="tel" id="myform_phone" name="popup2-phone" pattern="+[0-9]{10}" required="">
                     </div>
                     <div>
-                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Email</label>
-                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" type="email">
+                        <label class="pb-1 text-xs font-medium text-gray-400">Email</label>
+                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" name="popup2-email" type="email">
                     </div>
                     <div>
-                        <label class="pb-1 text-xs font-medium text-gray-400" for="name">Коментар</label>
-                        <textarea class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full resize-none" name="comment"></textarea>
+                        <label class="pb-1 text-xs font-medium text-gray-400">Коментар</label>
+                        <textarea class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full resize-none" name="popup2-comment"></textarea>
                     </div>
-                    <div class="counter"></div>
-
                 </div>
                 <div class="mt-[43px] flex justify-start">
-                    <input class="btn cursor-pointer sm:w-full" type="submit" value="Відправити">
+                    <input class="btn cursor-pointer sm:w-full" type="submit" id="popup2-submit" value="Відправити">
                 </div>
             </form>
 
@@ -264,7 +260,7 @@
     </div>
 </section>
 
-        <section class="pb-[8.75rem] lg:pb-20">
+        <section class="pb-[8.75rem] lg:pb-20" id="metods">
     <div class="container">
         <h2 class="text-darkgrey-700 font-semibold tracking-[-0.003em]">Види вантажоперевезень</h2>
         <div class="pt-8 flex justify-center gap-x-[1.875rem] lg:flex-col lg:gap-y-8 lg:items-center">
@@ -284,7 +280,7 @@
     </div>
 </section>
 
-        <section class="pb-[8.75rem] lg:pb-20">
+        <section class="pb-[8.75rem] lg:pb-20" id="steps">
     <div class="container">
         <h2 class="text-darkgrey-700 font-semibold tracking-[-0.003em]">Як це працює?</h2>
         <div class="mt-8 flex items-center gap-x-[5.5rem] lg:flex-col lg:items-start lg:gap-y-8">
@@ -416,7 +412,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="pt-14 bg-darkgrey-800">
+    <footer class="pt-14 bg-darkgrey-800" id="footer">
     <div class="container">
         <div class="pb-16 flex justify-center gap-x-9 border-b border-gray-400 lg:flex-col">
             <div>
@@ -448,30 +444,30 @@
                     <a href=""><img src="/public/images/footer/telegram.svg" alt=""></a>
                 </div>
             </div>
-            <form class="p-8 bg-darkgrey-700 rounded-lg w-full max-w-[27.125rem] lg:mt-10 lg:max-w-none">
+            <form id="footer-form" class="p-8 bg-darkgrey-700 rounded-lg w-full max-w-[27.125rem] lg:mt-10 lg:max-w-none">
                 <h4 class="font-medium text-white">Заповніть заявку</h4>
                 <div class="mt-6 flex-col flex gap-y-2">
                     <div>
                         <label class="pb-1 text-xs font-medium text-gray-400" for="name">Ім’я та прізвище</label>
-                        <input class="pl-4 py-[11px] bg-gray-700 rounded-lg text-white text-xs outline-yellow-100 outline-1 w-full" type="text">
+                        <input class="pl-4 py-[11px] bg-gray-700 rounded-lg text-white text-xs outline-yellow-100 outline-1 w-full" name="footer-name" type="text">
                     </div>
                     <div>
                         <label class="pb-1 text-xs font-medium text-gray-400" for="name">Номер телефону</label>
-                        <input class="pl-4 py-[11px] bg-gray-700 rounded-lg text-white text-xs outline-yellow-100 outline-1 w-full" type="tel" id="myform_phone" name="phone" pattern="+[0-9]{10}" required="">
+                        <input class="pl-4 py-[11px] bg-gray-700 rounded-lg text-white text-xs outline-yellow-100 outline-1 w-full" type="tel" name="footer-phone" pattern="+[0-9]{10}" required="">
                     </div>
                     <div>
                         <label class="pb-1 text-xs font-medium text-gray-400" for="name">Email</label>
-                        <input class="pl-4 py-[11px] bg-gray-700 rounded-lg text-white text-xs outline-yellow-100 outline-1 w-full" type="email">
+                        <input class="pl-4 py-[11px] bg-gray-700 rounded-lg text-white text-xs outline-yellow-100 outline-1 w-full" name="footer-email" type="email">
                     </div>
                     <div>
                         <label class="pb-1 text-xs font-medium text-gray-400" for="name">Коментар</label>
-                        <textarea class="pl-4 py-[11px] bg-gray-700 rounded-lg text-white text-xs outline-yellow-100 outline-1 w-full resize-none" name="comment"></textarea>
+                        <textarea class="pl-4 py-[11px] bg-gray-700 rounded-lg text-white text-xs outline-yellow-100 outline-1 w-full resize-none" name="footer-comment"></textarea>
                     </div>
-                    <div class="counter"></div>
+
 
                 </div>
                 <div class="mt-[43px] flex justify-start">
-                    <input class="btn cursor-pointer sm:w-full" type="submit" value="Відправити">
+                    <input class="btn cursor-pointer sm:w-full" type="submit" value="Відправити" id="footer-submit">
                 </div>
             </form>
         </div>
