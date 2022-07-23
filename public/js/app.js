@@ -209,8 +209,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.dropdown-toggle').forEach(dropDownFunc); // Dropdown Open and Close function
 
   function dropDownFunc(dropDown) {
-    
-
     if (dropDown.classList.contains('click-dropdown') === true) {
       dropDown.addEventListener('click', function (e) {
         e.preventDefault();
@@ -246,9 +244,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       dropDown.onmouseover = dropDown.onmouseout = dropdownHover;
     }
-  }
+  } // Listen to the doc click
 
-  ; // Listen to the doc click
 
   window.addEventListener('click', function (e) {
     // Close the menu if click happen outside menu
@@ -259,8 +256,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }); // Close the openend Dropdowns
 
   function closeDropdown() {
-    console.log('run'); // remove the open and active class from other opened Dropdown (Closing the opend DropDown)
-
+    // remove the open and active class from other opened Dropdown (Closing the opend DropDown)
     document.querySelectorAll('.dropdown-container').forEach(function (container) {
       container.classList.remove('dropdown-open');
     });
@@ -287,11 +283,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /**
  * mix-html-builder temporary fix for images START
  */
-document.addEventListener('DOMContentLoaded', function () {
-  var pathName = document.location.pathname;
-  pathName = pathName.substring(0, pathName.lastIndexOf('/') + 1);
-  document.body.innerHTML = document.body.innerHTML.replace(/\/public\//g, pathName);
-});
+
 /**
  * END
  */

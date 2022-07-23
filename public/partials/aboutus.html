@@ -1,0 +1,71 @@
+<head><script defer="defer" src=".//js/manifest.js"></script><script defer="defer" src=".//js/vendor.js"></script><script defer="defer" src=".//js/app.js"></script><link href="./css/tailwind.css" rel="stylesheet"><link href="./css/app.css" rel="stylesheet"></head><section class="pb-[8.75rem] lg:pb-20">
+    <div class="container">
+        <div class="flex gap-x-10 lg:flex-col">
+            <div class="max-w-[35rem] lg:order-1 lg:mt-8">
+                <h2 class="font-semibold text-darkgrey-700">Вантажоперевезення від TRANSEXPEDITION</h2>
+                <p class="mt-8 max-w-[34.5rem]">Компанія TRANSEXPEDITION заснована у 1997 році у м. Одеса.
+                    <br>
+                    За цей час ми освоїли маршрути Україною та велікої кількості країн.
+                    <br>
+                    Наша професіональна команда гарантує якість сервісу, тому
+                    якщо вам потрібен надійний партнер, готовий впоратися з найскладнішими вантажами – ми готові
+                    оперативно та грамотно вирішити будь-яке завдання.
+                    <br>
+                    Зателефонуйте нам або залиште заявку для зворотнього зв`язку.
+                </p>
+                <div class="mt-6 flex justify-start transition duration-300 ease-in-out" x-data="{id:'modal-example'}">
+                    <a href="" x-on:click.prevent="$dispatch('modal-overlay',{id})" class="btn sm:w-full">Зв’язатись</a>
+                </div>
+                <div class="mt-8 flex justify-between lg:flex-col lg:gap-y-6">
+                    <div>
+                        <h2 class="font-semibold text-gray-500 tracking-[-0.003em] lg:!text-h2">25</h2>
+                        <p class="pt-1">років досвіду</p>
+                    </div>
+                    <div>
+                        <h2 class="font-semibold text-gray-500 tracking-[-0.003em] lg:!text-h2">20000+</h2>
+                        <p class="pt-1">здійснених перевезень</p>
+                    </div>
+                    <div>
+                        <h2 class="font-semibold text-gray-500 tracking-[-0.003em] lg:!text-h2">1000</h2>
+                        <p class="pt-1">перевезень за рік</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-2 rounded-lg">
+                <img class="w-full h-full" src="/public/images/aboutus/aboutusimg.jpg" alt="">
+            </div>
+        </div>
+        <div class="fixed inset-0 z-10 flex flex-col items-center justify-center overflow-y-auto bg-black bg-opacity-80" x-data="{modal:false}" x-show="modal" x-on:modal-overlay.window="if ($event.detail.id == 'modal-example') modal=true" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-cloak="">
+            <form id="about-form" class="p-8 bg-white rounded-lg w-full max-w-[27.125rem] transition-all transform sm:w-[calc(100%_-_16px_*_2)] relative" aria-modal="true" aria-labelledby="modal-headline" x-show="modal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4 sm:translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4 sm:translate-y-4" @click.away="modal=false">
+                <div @click="modal=false" class="absolute top-[-2.5rem] right-0 cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="hover:fill-yellow-100" fill-rule="evenodd" clip-rule="evenodd" d="M19.1341 2.6007C19.6133 2.12166 19.6133 1.34497 19.1341 0.865933C18.6552 0.386893 17.8785 0.386893 17.3995 0.865933L10.0002 8.26523L2.6009 0.865933C2.12184 0.386893 1.34516 0.386893 0.866116 0.865933C0.387076 1.34497 0.387076 2.12166 0.866116 2.6007L8.26541 9.99999L0.866116 17.3993C0.387076 17.8784 0.387076 18.6549 0.866116 19.1341C1.34516 19.613 2.12184 19.613 2.6009 19.1341L10.0002 11.7348L17.3995 19.1341C17.8785 19.613 18.6552 19.613 19.1341 19.1341C19.6133 18.6549 19.6133 17.8784 19.1341 17.3993L11.7349 9.99999L19.1341 2.6007Z" fill="white"></path>
+                    </svg>
+                </div>
+                <h4 class="font-medium text-darkgrey-700">Заповніть заявку</h4>
+                <div class="mt-6 flex-col flex gap-y-2">
+                    <div>
+                        <label class="pb-1 text-xs font-medium text-gray-400">Ім’я та прізвище</label>
+                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" name="popup2-name" type="text">
+                    </div>
+                    <div>
+                        <label class="pb-1 text-xs font-medium text-gray-400">Номер телефону</label>
+                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" type="tel" id="myform_phone" name="popup2-phone" pattern="+[0-9]{10}" required="">
+                    </div>
+                    <div>
+                        <label class="pb-1 text-xs font-medium text-gray-400">Email</label>
+                        <input class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full" name="popup2-email" type="email">
+                    </div>
+                    <div>
+                        <label class="pb-1 text-xs font-medium text-gray-400">Коментар</label>
+                        <textarea class="pl-4 py-[11px] bg-gray-100 rounded-lg text-gray-400 text-xs outline-gray-300 outline-1 w-full resize-none" name="popup2-comment"></textarea>
+                    </div>
+                </div>
+                <div class="mt-[43px] flex justify-start">
+                    <input class="btn cursor-pointer sm:w-full" type="submit" id="popup2-submit" value="Відправити">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>

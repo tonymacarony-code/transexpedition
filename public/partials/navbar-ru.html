@@ -1,0 +1,75 @@
+<head><script defer="defer" src=".//js/manifest.js"></script><script defer="defer" src=".//js/vendor.js"></script><script defer="defer" src=".//js/app.js"></script><link href="./css/tailwind.css" rel="stylesheet"><link href="./css/app.css" rel="stylesheet"></head><section class="fixed z-10 w-full top-0" x-data="nav( $el )">
+    <nav class="py-[1.563rem] bg-gray-900 z-10 bg-opacity-60 transition ease-in-out">
+        <div class="container">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-x-[3.938rem] xl:gap-x-5">
+                    <a href="">
+                        <img src="/public/images/logo.svg" alt=""></a>
+                    <ul class="flex gap-x-10 xl:gap-x-8 lg:hidden">
+                        <li><a class="link" href="#aboutus">Про нас</a></li>
+                        <li><a class="link" href="#metods">Виды</a></li>
+                        <li><a class="link" href="#steps">Этапы</a></li>
+                        <li><a class="link" href="#footer">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-x-[2.875rem] lg:hidden">
+                    <div class="dropdown-container">
+                        <div class="dropdown-toggle click-dropdown w-[168px]">
+                            <span>Язык</span>
+                        </div>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="./index.html">
+                                        <div class="flex items-center gap-x-2">
+                                            <div class="w-7 h-5">
+                                                <img class="w-full h-full object-cover" src="/public/images/flags/ukr.png" alt="">
+                                            </div>
+                                            <span>Українська</span>
+                                        </div>
+
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="btn-number" href="tel:+380553421990">+38(055) 34 21 990</a>
+                </div>
+                <div class="hamburger" @click="hamburgerClick()" :class="{ 'opened' : mobileMenu }">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </nav>
+    <div class="menu" :class="{ 'opened' : mobileMenu }">
+        <div class="dropdown-container">
+            <div class="dropdown-toggle click-dropdown">
+                <div class="flex items-center gap-x-2 w-48">
+                    <div class="w-7 h-5">
+                        <img class="w-full h-full object-cover" src="/public/images/flags/ukr.png" alt="">
+                    </div>
+                    <span class="link-mobile">Українська</span>
+                </div>
+
+            </div>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a class="link-mobile" href="./index-ru.html">
+                            Язык
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul class="pt-10 flex flex-col gap-y-4">
+            <li><a class="link link-mobile" href="#aboutus">Про нас</a></li>
+            <li><a class="link link-mobile" href="#metods">Виды</a></li>
+            <li><a class="link link-mobile" href="#steps">Этапы</a></li>
+            <li><a class="link link-mobile" href="#footer">Контакты</a></li>
+        </ul>
+        <a class="mt-10 btn-number" href="tel:+380553421990">+38(055) 34 21 990</a>
+    </div>
+</section>
