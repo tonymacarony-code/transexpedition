@@ -1,6 +1,6 @@
 export default ($el) => ({
     mobileMenu: false,
-    html: document.querySelector('html'),
+    html: document.querySelector('body'),
     menu: $el.querySelector('.menu'),
     init() {
         this.mobileMenuItem();
