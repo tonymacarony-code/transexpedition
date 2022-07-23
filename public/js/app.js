@@ -23,6 +23,17 @@ __webpack_require__.r(__webpack_exports__);
       this.mobileMenu = !this.mobileMenu;
       this.html.classList.toggle('overflow-hidden');
       this.html.classList.toggle('touch-none');
+    },
+    mobileMenuItem: function mobileMenuItem() {
+      var menu = this.menu,
+          dropMenu = menu.querySelectorAll('.menu-item-has-children');
+      dropMenu.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+          if (e.target == e.currentTarget) {
+            item.classList.toggle('open');
+          }
+        });
+      });
     }
   };
 });
