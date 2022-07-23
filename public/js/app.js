@@ -21,8 +21,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     hamburgerClick: function hamburgerClick() {
       this.mobileMenu = !this.mobileMenu;
-      this.html.classList.toggle('overflow-hidden');
-      this.html.classList.toggle('touch-none');
+      this.html.classList.toggle('lock-scroll');
     },
     mobileMenuItem: function mobileMenuItem() {
       var menu = this.menu,

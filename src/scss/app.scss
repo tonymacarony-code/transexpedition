@@ -25,9 +25,12 @@ body {
         max-width: 1202px !important;
         @apply px-4 mx-auto;
     }
-    
 }
-
+.lock-scroll {
+    overflow: hidden;
+    touch-action: none;
+    -ms-touch-action: none;
+}
 select {
     @apply cursor-pointer bg-transparent outline-none appearance-none font-semibold text-white hover:text-yellow-200;
     option {
@@ -80,10 +83,9 @@ hr {
 }
 
 .scale-90 {
-    transform: scale(.9);
+    transform: scale(0.9);
 }
 
 .scale-100 {
     transform: scale(1);
 }
-

@@ -434,6 +434,12 @@ body .container {
   padding-right: 1rem;
 }
 
+.lock-scroll {
+  overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
 select {
   cursor: pointer;
   -webkit-appearance: none;

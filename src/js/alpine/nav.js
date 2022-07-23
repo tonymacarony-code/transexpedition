@@ -7,8 +7,7 @@ export default ($el) => ({
     },
     hamburgerClick() {
         this.mobileMenu = !this.mobileMenu;
-        this.html.classList.toggle('overflow-hidden');
-        this.html.classList.toggle('touch-none');
+        this.html.classList.toggle('lock-scroll');
     },
     mobileMenuItem() {
         var menu = this.menu,
